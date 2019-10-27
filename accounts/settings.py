@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     # custom apps
     'apps.function_user',
+    'apps.partial_classview_user',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = reverse_lazy('login')
+
+
+# login redirect for partial_classview_login
+LOGIN_REDIRECT_URL = reverse_lazy('partial_success')
+# LOGOUT_REDIRECT_URL = reverse_lazy('partial_success')

@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('function_user/', include('apps.function_user.urls')),
+    path('partial_classview_user/', include('apps.partial_classview_user.urls')),
 ]
