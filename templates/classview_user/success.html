@@ -1,0 +1,22 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{message.tags}}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<br>
+<h1>Classview Successful Page </h1>
+<hr>
+{% if request.user.is_authenticated %}
+    <p><a href="{% url 'classview_logout' %}">Logout</a></p>
+{% else %}
+    <p><a href="{% url 'classview_register' %}">Register</a></p>
+    <p><a href="{% url 'classview_login' %}">Login</a></p>
+{% endif %}
+
+
+

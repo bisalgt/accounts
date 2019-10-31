@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # custom apps
     'apps.function_user',
     'apps.partial_classview_user',
+    'apps.classview_user',
+
 ]
 
 MIDDLEWARE = [
